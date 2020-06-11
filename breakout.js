@@ -5,8 +5,8 @@ var ctx = canvas.getContext('2d'); //tore the 2D rendering context — the actua
 var x = canvas.width / 2;
 var y = canvas.height - 30;
 
-var dx = 2;
-var dy = -2;
+var dx = 3;
+var dy = -3;
 
 var ballRadius = 10;
 
@@ -78,7 +78,6 @@ function collisionDetection() {
             if(b.status == 1) {
                 if(x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
                     dy = -dy;
-                    dx *= 1.5;
                     b.status = 0;
                     score++;
                     if(score == brickRowCount * brickColumnCount) {
@@ -172,8 +171,8 @@ function draw() {
             else {
                 x = canvas.width/2;
                 y = canvas.height/30;
-                dx = 2;
-                dx = -2;
+                dx = 3;
+                dx = -3;
                 paddleX = (canvas.width - paddleWidth / 2);
             }
         }    
